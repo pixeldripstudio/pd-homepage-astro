@@ -1,0 +1,67 @@
+---
+const SERVICES = [
+  { id: 'web-design', title: 'Web Design & Development', body: "High-converting websites built from scratch — fast, mobile-first, and designed to turn visitors into leads. Every pixel has a purpose.", link: '#', linkLabel: 'Houston website redesign →' },
+  { id: 'seo-ai', title: 'SEO & AI Search Visibility', body: 'Rank on Google AND get cited by AI tools like ChatGPT and Perplexity. We build content architectures that own your niche organically.', link: '#', linkLabel: 'SEO & AI visibility services →' },
+  { id: 'google-ads', title: 'Google Ads Management', body: 'Targeted paid search campaigns that put you in front of buyers ready to act — with transparent reporting and zero wasted spend.', link: '#', linkLabel: 'Google Ads management →' },
+  { id: 'gbp', title: 'Google Business Profile', body: 'Dominate local search with an optimized GBP that drives calls, directions, and reviews — the foundation of local lead flow.', link: '#', linkLabel: 'GBP management services →' },
+  { id: 'funnels', title: 'Sales Funnels & CRO', body: 'Strategic landing pages and conversion-rate optimization that turn your existing traffic into more leads without increasing ad spend.', link: '#', linkLabel: 'Sales funnels & CRO →' },
+  { id: 'ai-automations', title: 'AI Business Automations', body: 'Automate follow-ups, lead nurturing, and repetitive workflows using AI — so you close more deals without adding headcount.', link: '#', linkLabel: 'AI automation services →' },
+];
+---
+
+<section id="pd-home-digital-lane" class="section-digital-lane">
+  <div class="container">
+    <div class="lane-grid">
+      <div class="lane-intro fade-up">
+        <span class="lane-eyebrow">Dominate The Screen</span>
+        <h2 class="lane-heading text-white">Your Digital Infrastructure</h2>
+        <p class="lane-body">
+          We don't sell website packages. We build connected digital systems — search visibility, paid traffic, local presence, automation — all engineered to feed your pipeline. Every service we offer locks into the next, creating a growth engine that compounds over time.
+        </p>
+        <p class="lane-body">
+          Whether you need a single channel or the full stack, each piece is built with conversion as the north star. Click any service to see what it means for your business.
+        </p>
+      </div>
+
+      <div class="lane-accordion fade-up" style="transition-delay:0.2s;">
+        {SERVICES.map((s, i) => (
+          <div class={`accordion-item${i === 0 ? ' open' : ''}`} data-id={s.id}>
+            <div class="accordion-header">
+              <span class="accordion-header-inner">
+                <svg class="accordion-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                {s.title}
+              </span>
+              <svg class="accordion-toggle" viewBox="0 0 24 24" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19" stroke-linecap="round"/>
+                <line x1="5" y1="12" x2="19" y2="12" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="accordion-body" style={i === 0 ? '' : 'display:none;'}>
+              <p>{s.body}</p>
+              <a href={s.link} class="accordion-learn-more">{s.linkLabel}</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.accordion-item').forEach((item) => {
+    item.querySelector('.accordion-header')?.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.accordion-item').forEach((i) => {
+        i.classList.remove('open');
+        const body = i.querySelector('.accordion-body') as HTMLElement;
+        if (body) body.style.display = 'none';
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        const body = item.querySelector('.accordion-body') as HTMLElement;
+        if (body) body.style.display = '';
+      }
+    });
+    item.querySelector('.accordion-learn-more')?.addEventListener('click', (e) => e.stopPropagation());
+  });
+</script>

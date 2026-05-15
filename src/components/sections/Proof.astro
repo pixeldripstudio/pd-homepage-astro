@@ -1,0 +1,34 @@
+---
+const TESTIMONIALS = [
+  { quote: '"We went from invisible on Google to getting 3–5 calls a day from new customers. PixelDrip didn\'t just build us a website — they built us a system."', author: 'Marcus T.', business: 'HVAC Contractor — Houston, TX' },
+  { quote: '"Terry and the team are the real deal. Straight answers, no runaround, and our Google rankings actually moved. We\'ve tried three other agencies. PixelDrip is the first one that delivered."', author: 'Sandra R.', business: 'Boutique Retail — Tyler, TX' },
+  { quote: '"The branded apparel and yard signs alone brought in two new clients at our last event. People kept asking who did our branding. That\'s never happened before."', author: 'James K.', business: 'Landscaping Company — East Texas' },
+];
+---
+
+<section id="pd-home-proof" class="section-proof">
+  <div class="container">
+    <span class="section-label text-blue text-center fade-up">What Texas Businesses Are Saying</span>
+    <h2 class="proof-headline text-white text-center fade-up" style="transition-delay:0.1s;">Results Our Clients Can Measure</h2>
+    <p class="proof-subheading text-center fade-up" style="transition-delay:0.2s;">
+      Real Texas businesses getting real results. No fluff, just marketing that works.
+    </p>
+
+    <div class="grid-3">
+      {TESTIMONIALS.map((t, i) => (
+        <article class="card-glass testimonial-card fade-up" style={`transition-delay:${0.15 + i * 0.12}s;`}>
+          <p class="testimonial-stars text-blue">★★★★★</p>
+          <blockquote class="testimonial-quote text-body-dark">{t.quote}</blockquote>
+          <footer class="testimonial-footer">
+            <p class="testimonial-author text-white">{t.author}</p>
+            <p class="testimonial-business text-muted">{t.business}</p>
+          </footer>
+        </article>
+      ))}
+    </div>
+
+    <div class="proof-link fade-up" style="transition-delay:0.4s;">
+      <a href="#" class="btn-ghost">See All Results →</a>
+    </div>
+  </div>
+</section>

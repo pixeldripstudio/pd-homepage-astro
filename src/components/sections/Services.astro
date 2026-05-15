@@ -1,0 +1,56 @@
+---
+const SERVICES = [
+  { title: 'Web Design & Development', body: 'Websites built to turn visitors into customers — fast, modern, and built for Texas businesses.' },
+  { title: 'SEO & AI Search Visibility', body: 'Get found on Google and in AI-powered search results before your competitors do.' },
+  { title: 'Google Ads Management', body: 'Stop burning ad budget. We build and manage campaigns that bring in real leads.' },
+  { title: 'Google Business Profile', body: 'Dominate local search and Google Maps — the #1 source of calls for local businesses.' },
+  { title: 'Sales Funnels & CRO', body: 'Turn more of your existing traffic into paying customers without spending more on ads.' },
+  { title: 'AI Business Automations', body: 'Automate the follow-ups, scheduling, and workflows that are eating your time.' },
+];
+
+const TAGS = ['Apparel', 'Yard Signs', 'Banners', 'Business Cards', 'Stickers', 'Flyers', 'Door Hangers', 'Promo Items'];
+---
+
+<section id="pd-home-services" class="section-services">
+  <div class="container">
+    <div class="services-header text-center fade-up">
+      <span class="section-label text-blue">What We Do</span>
+      <h2 class="services-headline text-dark">Everything Your Business Needs To Get Found And Get Chosen</h2>
+      <p class="services-intro text-body-light">
+        Whether a customer finds you on Google, drives past your truck, or gets handed your card — PixelDrip makes sure every touchpoint is working together to bring them through the door.
+      </p>
+    </div>
+
+    <p class="section-sublabel text-dark fade-up" style="transition-delay:0.1s;">Dominate the Screen</p>
+
+    <div class="grid-3 services-grid">
+      {SERVICES.map((s, i) => (
+        <div class="card-flat-white fade-up" style={`transition-delay:${0.1 + i * 0.06}s;`}>
+          <div class="service-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M12 8v4M12 16h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="service-title text-dark">{s.title}</h3>
+          <p class="service-body text-body-light">{s.body}</p>
+        </div>
+      ))}
+    </div>
+
+    <p class="section-sublabel text-dark fade-up" style="transition-delay:0.5s;">Command the Street</p>
+    <div class="physical-block fade-up" style="transition-delay:0.55s;">
+      <div class="physical-icon-row">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.86H5v10a1 1 0 001 1h12a1 1 0 001-1V10h1.15a1 1 0 00.99-.86l.58-3.57a2 2 0 00-1.34-2.23z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1="7" x2="7.01" y2="7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </div>
+      <h3 class="physical-headline text-dark">Your Brand Doesn't Stop When The Screen Does</h3>
+      <p class="physical-body text-body-light">
+        The businesses people remember aren't just online — they're everywhere. A yard sign that stops traffic. A branded shirt that starts a conversation. A business card that doesn't get thrown away.
+      </p>
+      <div class="product-tags">
+        {TAGS.map((tag) => <span class="product-tag">{tag}</span>)}
+      </div>
+    </div>
+  </div>
+</section>

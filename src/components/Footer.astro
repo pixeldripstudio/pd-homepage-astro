@@ -1,0 +1,71 @@
+---
+const GROW = [{ label: 'Web Design', href: '#' }, { label: 'SEO & AI Search', href: '#' }, { label: 'Google Ads', href: '#' }, { label: 'AI Automations', href: '#' }, { label: 'GBP Management', href: '#' }, { label: 'Sales Funnels', href: '#' }];
+const PRINT = [{ label: 'Signs & Displays', href: '#' }, { label: 'Branded Apparel', href: '#' }, { label: 'Business Cards', href: '#' }, { label: 'Stickers', href: '#' }, { label: 'Flyers', href: '#' }, { label: 'Promo Items', href: '#' }];
+const COMPANY = [{ label: 'About', href: '#' }, { label: 'Our Work', href: '#' }, { label: 'Contact', href: '#' }, { label: 'Free Inspection', href: '#pd-home-cta' }];
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="grid-4 footer-grid">
+
+      <div class="footer-brand">
+        <p class="footer-wordmark">
+          <span class="footer-wordmark-pixel">Pixel</span><span class="footer-wordmark-drip">Drip</span><span class="footer-wordmark-studio"> Studio</span>
+        </p>
+        <p class="footer-tagline">Marketing That Actually Works</p>
+        <p class="footer-desc">PixelDrip Studio helps Texas businesses get more customers by making their marketing actually work.</p>
+        <div class="footer-social">
+          <a href="#" class="footer-social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke="currentColor" stroke-width="1.8"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.8"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="X" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 8v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="footer-contact">
+          <a href="tel:+18328101502" class="footer-phone">+1 (832) 810-1502</a>
+          <a href="mailto:hello@pixeldripstudio.com" class="footer-email">hello@pixeldripstudio.com</a>
+          <address class="footer-address">459 Marshall Lane, Hemphill, TX 75948</address>
+        </div>
+      </div>
+
+      <div class="footer-nav-col">
+        <span class="footer-nav-label blue">Grow Online</span>
+        <ul class="footer-nav-list">
+          {GROW.map(({ label, href }) => <li><a href={href} class="footer-nav-link">{label}</a></li>)}
+        </ul>
+      </div>
+
+      <div class="footer-nav-col">
+        <span class="footer-nav-label">Print &amp; Promo</span>
+        <ul class="footer-nav-list">
+          {PRINT.map(({ label, href }) => <li><a href={href} class="footer-nav-link">{label}</a></li>)}
+        </ul>
+      </div>
+
+      <div class="footer-nav-col">
+        <span class="footer-nav-label">Company</span>
+        <ul class="footer-nav-list">
+          {COMPANY.map(({ label, href }) => <li><a href={href} class="footer-nav-link">{label}</a></li>)}
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <p class="footer-copy">© 2025 PixelDrip Studio LLC. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <span class="footer-legal-sep">·</span>
+          <a href="#" class="footer-legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
