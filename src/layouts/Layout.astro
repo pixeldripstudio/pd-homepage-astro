@@ -193,8 +193,7 @@ const schema = {
         },
         { threshold: 0.12 }
       );
-      document.querySelectorAll('.fade-up:not(.hero-animate)').forEach((el) => observer.observe(el));
-      document.querySelectorAll('.hero-animate').forEach((el) => el.classList.add('visible'));
+      document.querySelectorAll('.fade-up:not(.visible)').forEach((el) => observer.observe(el));
     </script>
   </body>
 </html>
